@@ -39,7 +39,7 @@ conky.config = {
 conky.text = [[
 [
     { "full_text": "${exec xkblayout-state print %e} "  },
-    { "full_text": " ${cpu cpu0}%" },
+    { "full_text": " ${cpu cpu0}%" },
     { "full_text": "${acpitemp}°C" },
     { "full_text": " ${legacymem} (${memperc}%)" },
     { "full_text": " ${fs_used /home} (${fs_used_perc /home}%)" },
