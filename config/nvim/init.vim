@@ -29,7 +29,13 @@ Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
 " Plug 'hrsh7th/cmp-nvim-lsp'
 " Plug 'saadparwaiz1/cmp_luasnip'
 " Plug 'L3MON4D3/LuaSnip'
+Plug 'davidhalter/jedi-vim'
+Plug 'vim-syntastic/syntastic'
 call plug#end()
+
+let g:python3_host_prog = '/usr/bin/python3'
+set pyxversion=3
+let g:jedi#show_call_signatures = "0"
 
 " Gruvbox Material theme settings
 let g:gruvbox_contrast_dark = "medium"
