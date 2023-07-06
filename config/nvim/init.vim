@@ -58,7 +58,7 @@ let g:airline_theme = 'minimalist'
 " Vim-Jedi settings for python autocompletion
 " let g:python3_host_prog = '/usr/bin/python3'
 " set pyxversion=3
-" let g:jedi#show_call_signatures = "1"
+" let g:jedi#show_call_signatures = 1
 " let g:jedi#use_tabs_not_buffers = 1
 " let g:jedi#popup_on_dot = 0
 
