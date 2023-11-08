@@ -233,10 +233,10 @@ filextype *.bmp,*.jpg,*.jpeg,*.png,*.gif,*.xpm,*.webp
         \ {View in gpicview}
         \ gpicview %c,
 " fileviewer *.bmp,*.jpg,*.jpeg,*.png,*.gif,*.xpm,*.webp convert -identify %f -verbose /dev/null
-"fileviewer *.bmp,*.jpg,*.jpeg,*.png,*.gif,*.xpm,*.webp
-"    \ ~/.vifm/scripts/imgt %px %py %pw %ph %c
-"    \ %pc
-"    \ imgc %px %py %pw %ph	
+" fileviewer *.bmp,*.jpg,*.jpeg,*.png,*.gif,*.xpm,*.webp
+"     \ imgt %px %py %pw %ph %c
+"     \ %pc
+"     \ imgc %px %py %pw %ph	
 fileviewer <image/*>
         \ vifmimg draw %px %py %pw %ph %c
         \ %pc
