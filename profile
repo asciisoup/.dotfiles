@@ -1,2 +1,2 @@
-export TERMINAL="termite"
+export TERMINAL="kitty"
 export EDITOR="vim"

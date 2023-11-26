@@ -12,7 +12,7 @@ set fileencodings=utf-8,cp1251
 set nocompatible
 filetype indent on
 
-" Plugins settings
+" Plugins settings (vim-plug)
 call plug#begin('~/.vim/plugged')
 Plug 'preservim/nerdtree'		" NerdTREE
 Plug 'ryanoasis/vim-devicons'	" icons for vim
@@ -21,8 +21,12 @@ Plug 'vim-airline/vim-airline'	" status tabline
 Plug 'vim-airline/vim-airline-themes'	" themes for vim-airline
 Plug 'mattn/emmet-vim'			" improving of html/css workflow
 Plug 'vim-syntastic/syntastic'  " linter for python
-Plug 'nvim-lua/plenary.nvim'    " pluggins for telescope
+Plug 'nvim-lua/plenary.nvim'    " plugins for telescope
 Plug 'nvim-telescope/telescope.nvim'
+Plug 'williamboman/mason.nvim'
+Plug 'williamboman/mason-lspconfig.nvim'
+Plug 'neovim/nvim-lspconfig'
+Plug 'nvim-lua/completion-nvim'
 call plug#end()
 
 " Gruvbox Material theme settings
@@ -96,4 +100,30 @@ let g:NERDTreeIgnore = []
 " Press <Ctrl+N> to activate NerdTree pane
 nnoremap <C-n> :NERDTreeToggle<CR>
 
-set completeopt=menu,menuone,noselect
+
+
+" Use <Tab> and <S-Tab> to navigate through popup menu
+inoremap <expr> <Tab>   pumvisible() ? "\<C-n>" : "\<Tab>"
+inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+
+" Set completeopt to have a better completion experience
+set completeopt=menuone,noinsert,noselect
+
+" Avoid showing message extra message when using completion
+set shortmess+=c
+
+let g:completion_enable_auto_popup = 0
+imap <tab> <Plug>(completion_smart_tab)
+imap <s-tab> <Plug>(completion_smart_s_tab)
+
+lua <<EOF
+require("mason").setup({
+    ui ={
+        icons = {
+            package_installed = "✓",
+            package_pending = "➜",
+            package_uninstalled = "✗"
+        }
+    }
+})
+EOF
