@@ -1,6 +1,6 @@
 autoload -U colors && colors
 
-PS1='%B%F{015}%*%f %F{035}%M%f %~%b '
+PS1='%B%F{015}%*%f %F{035}%M%f %1~%b '
 
 alias ls='ls --color=auto'
 alias ll='ls -alh'
@@ -22,3 +22,10 @@ alias cfree='echo 3 | sudo tee /proc/sys/vm/drop_caches'
 alias tsm='transmission-remote'
 alias vifm='.vifm/vifmrun'
 alias iptv-player='mpv --script-opts=iptv=1 http://iptv.donapex.net/iptv.m3u &>/dev/null &'
+alias lscr='i3lock -i /home/asciisoup/.config/i3/wallpapers.png'
+
+export ZSH="$HOME/.oh-my-zsh"
+
+plugins=(colored-man-pages)
+
+source $ZSH/oh-my-zsh.sh

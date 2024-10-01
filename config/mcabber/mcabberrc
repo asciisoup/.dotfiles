@@ -14,7 +14,7 @@ set jid = alice-void@404.city
 
 # You can provide a server name if you want mcabber to connect
 # to a specific server.
-set server = xmpp.404.city
+set server = j.404.city
 
 # To automatically append the server to the JID in say_to, use this option:
 #set default_server = jabber.org
@@ -74,7 +74,7 @@ set tls = 1
 # This nickname is used when joining a room, when no nick is explicitly
 # specified by the user.  Note that when the nickname option is not set,
 # the jid variable can be used.
-set nickname = sobackin
+set nickname = asciisoup
 
 # Proxy
 # mcabber can use a proxy if it supports the CONNECT method
@@ -258,8 +258,8 @@ set beep_on_message = 0
 # the server.
 #set hook-pre-disconnect = say_to foo@bar Goodbye!
 
-module load editor
-set editor = vim
+# module load editor
+# set editor = vim
 
 # FIFO
 # mcabber can create a FIFO named pipe and listen to this pipe for commands.
@@ -293,8 +293,8 @@ set editor = vim
 #  lvl 3: debug logging (XML, etc.)
 #  lvl 4: noisy debug logging (Loudmouth parser...)
 # Default is level 0, no trace logging
-#set tracelog_level = 1
-#set tracelog_file = ~/.mcabber/mcabber.log
+# set tracelog_level = 1
+# set tracelog_file = /tmp/mcabber.log
 
 # Set the auto-away timeout, in seconds.  If set to a value >0,
 # mcabber will change your status to away if no real activity is detected
@@ -529,7 +529,7 @@ set show_status_in_buffer = 2
 # (Only available if mcabber is built with OTR support)
 # Set otr to 1 to enable OTR support.
 # You cannot change this option once mcabber is running.
-set otr = 1 
+set otr = 1
 #
 # OTR directory
 # You can specify the OTR directory with the otr_dir option
