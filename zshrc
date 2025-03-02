@@ -23,6 +23,7 @@ alias tsm='transmission-remote'
 alias vifm='.vifm/vifmrun'
 alias iptv-player='mpv --script-opts=iptv=1 http://iptv.donapex.net/iptv.m3u &>/dev/null &'
 alias lscr='i3lock -i /home/asciisoup/.config/i3/wallpapers.png'
+alias dfh='df -x tmpfs -h'
 
 export ZSH="$HOME/.oh-my-zsh"
 
