@@ -33,7 +33,6 @@ alias tmx='tmux new -s ronery -n home'
 alias nlc='links https://logs.0-chan.ru/boardplay/today'
 alias cfree='echo 3 | sudo tee /proc/sys/vm/drop_caches'
 alias tsm='transmission-remote'
-alias vifm='.vifm/vifmrun'
 alias iptv-player='mpv --script-opts=iptv=1 http://iptv.donapex.net/iptv.m3u &>/dev/null &'
 
 # PS1='\t [\033[01;32m\]\u@\h\[\033[00m\] \W] \$ '
@@ -43,14 +42,13 @@ PS1="\[$(tput bold)\]\t\[$(tput sgr0)\] [\[$(tput sgr0)\]\[$(tput bold)\]\[\033[
 [[ $DISPLAY ]] && shopt -s checkwinsize
 
 case ${TERM} in
-  xterm*|rxvt*|Eterm|aterm|kterm|gnome*)
-    PROMPT_COMMAND=${PROMPT_COMMAND:+$PROMPT_COMMAND; }'printf "\033]0;%s@%s:%s\007" "${USER}" "${HOSTNAME%%.*}" "${PWD/#$HOME/\~}"'
+xterm* | rxvt* | Eterm | aterm | kterm | gnome*)
+  PROMPT_COMMAND=${PROMPT_COMMAND:+$PROMPT_COMMAND; }'printf "\033]0;%s@%s:%s\007" "${USER}" "${HOSTNAME%%.*}" "${PWD/#$HOME/\~}"'
 
-    ;;
-  screen*)
-    PROMPT_COMMAND=${PROMPT_COMMAND:+$PROMPT_COMMAND; }'printf "\033_%s@%s:%s\033\\" "${USER}" "${HOSTNAME%%.*}" "${PWD/#$HOME/\~}"'
-    ;;
+  ;;
+screen*)
+  PROMPT_COMMAND=${PROMPT_COMMAND:+$PROMPT_COMMAND; }'printf "\033_%s@%s:%s\033\\" "${USER}" "${HOSTNAME%%.*}" "${PWD/#$HOME/\~}"'
+  ;;
 esac
 
-[ -r /usr/share/bash-completion/bash_completion   ] && . /usr/share/bash-completion/bash_completion
-
+[ -r /usr/share/bash-completion/bash_completion ] && . /usr/share/bash-completion/bash_completion

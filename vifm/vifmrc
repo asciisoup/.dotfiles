@@ -163,12 +163,13 @@ command! reload :write | restart
 " program.
 
 " Pdf
-" filextype *.pdf zathura %c %i &, apvlv %c, xpdf %c
-" fileviewer *.pdf pdftotext -nopgbrk %c -
-fileviewer *.pdf
-        \ vifmimg pdf %px %py %pw %ph %c
-        \ %pc
-        \ vifmimg clear
+ filextype {*.pdf},<application/pdf> zathura %c &, mupdf %c, xpdf %c
+" filetype *.pdf open -a Preview %f &
+" fileviewer *.pdf
+"         \ pdftoppm -f 1 -l 1 -singlefile %f |
+"         \ kitten icat --transfer-mode=stream --place=%pwx%ph@%pxx%py %c >/dev/tty </dev/tty %N
+"         \ %pc
+"         \ kitten icat --clear --silent >/dev/tty </dev/tty %N
 
 " PostScript
 filextype *.ps,*.eps,*.ps.gz
@@ -227,21 +228,15 @@ filetype *.[1-8] gtbl %c | groff -Tascii -man | less
 fileviewer *.[1-8] gtbl %c | groff -Tascii -man | col -b
 
 " Image
-filextype *.bmp,*.jpg,*.jpeg,*.png,*.gif,*.xpm,*.webp
+filetype *.bmp,*.jpg,*.jpeg,*.png,*.gif,*.xpm,*.webp open -a Preview %f &
+fileviewer *.bmp,*.jpg,*jpeg,*.png,*.xpm
         \ {View in sxiv}
         \ sxiv,
         \ {View in gpicview}
         \ gpicview %c,
-" fileviewer *.bmp,*.jpg,*.jpeg,*.png,*.gif,*.xpm,*.webp convert -identify %f -verbose /dev/null
-" fileviewer *.bmp,*.jpg,*.jpeg,*.png,*.gif,*.xpm,*.webp
-"     \ imgt %px %py %pw %ph %c
-"     \ %pc
-"     \ imgc %px %py %pw %ph	
-fileviewer <image/*>
-        \ vifmimg draw %px %py %pw %ph %c
+        \ kitten icat --transfer-mode=stream --place=%pwx%ph@%pxx%py %c >/dev/tty </dev/tty %N
         \ %pc
-        \ vifmimg clear
-
+        \ kitten icat --clear --silent >/dev/tty </dev/tty %N
 
 " MD5
 filetype *.md5
