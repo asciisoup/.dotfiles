@@ -30,10 +30,8 @@ alias touchpadon='xinput -set-prop "SynPS/2 Synaptics TouchPad" "Device Enabled"
 alias swaprld='sudo swapoff -a && sudo swapon -a'
 alias space='du -smh * | sort -nr'
 alias tmx='tmux new -s ronery -n home'
-alias nlc='links https://logs.0-chan.ru/boardplay/today'
 alias cfree='echo 3 | sudo tee /proc/sys/vm/drop_caches'
 alias tsm='transmission-remote'
-alias iptv-player='mpv --script-opts=iptv=1 http://iptv.donapex.net/iptv.m3u &>/dev/null &'
 
 # PS1='\t [\033[01;32m\]\u@\h\[\033[00m\] \W] \$ '
 # PS1="\[$(tput bold)\]\t\[$(tput sgr0)\] [\[$(tput sgr0)\]\[$(tput bold)\]\[\033[38;5;35m\]\u\[$(tput sgr0)\] \[$(tput bold)\]\W\[$(tput sgr0)\]] \[$(tput bold)\]\\$\[$(tput sgr0)\] \[$(tput sgr0)\]"
