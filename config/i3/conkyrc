@@ -44,7 +44,7 @@ conky.text = [[
     { "full_text": "   ${legacymem} (${memperc}%)" },
     { "full_text": "   ${fs_used /home} (${fs_used_perc /home}%)" },
     { "full_text": "   ${time %H:%M, %d %B, %Y}" },
-    { "full_text": "    ${battery_percent BAT1}% " },
+    { "full_text": "    ${battery_percent BAT0}% " },
     { "full_text": "" }
 ],
 ]];

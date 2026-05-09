@@ -25,6 +25,8 @@ alias lscr='i3lock -i /home/asciisoup/.config/i3/wallpapers.png'
 alias dfh='df -x tmpfs -h'
 
 export ZSH="$HOME/.oh-my-zsh"
+export EDITOR=/usr/bin/nvim
+export VISUAL=/usr/bin/nvim
 
 plugins=(colored-man-pages)
 

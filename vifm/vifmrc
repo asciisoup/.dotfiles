@@ -94,7 +94,7 @@ set incsearch
 
 " Try to leave some space from cursor to upper/lower border in lists
 
-set scrolloff=4
+" set scrolloff=4
 
 " Don't do to much requests to slow file systems
 
@@ -360,7 +360,7 @@ set vifminfo=dhistory,savedirs,chistory,state,tui,shistory,
 
 " Customize view columns a bit (enable ellipsis for truncated file names)
 "
-" windo set viewcolumns=-{name}..,6{}.
+" windo set viewcolumns=-{name}..,9{}.
 
 " Filter-out build and temporary files
 "
